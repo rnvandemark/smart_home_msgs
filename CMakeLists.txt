@@ -14,7 +14,6 @@ endif()
 find_package(catkin REQUIRED COMPONENTS message_generation)
 find_package(std_msgs REQUIRED)
 
-# Specify the original directory and expand the list of message filenames
 add_message_files(
 	DIRECTORY msg
 	FILES
@@ -27,7 +26,6 @@ add_message_files(
 	WaveUpdate.msg
 )
 
-# These messages obviously have the same dependencies as those in smart_home_interfaces
 generate_messages(DEPENDENCIES
 	std_msgs
 )
