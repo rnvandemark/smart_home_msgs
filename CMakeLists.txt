@@ -32,6 +32,7 @@ add_service_files(
 	DIRECTORY srv
 	FILES
 	RequestScreenCalibration.srv
+	SetScreenCalibrationPointsOfHomography.srv
 )
 
 generate_messages(DEPENDENCIES
