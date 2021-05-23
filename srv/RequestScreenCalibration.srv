@@ -1,0 +1,18 @@
+# The parameters used for image processing (will be defaulted if non-positive)
+int8 max_corners
+float32 quality_level
+float32 min_dist
+uint8 bin_threshold
+bool do_blur
+uint8 kh
+uint8 kw
+---
+# Whether or not the entire corner-detection pipeline succeeded
+bool corners_found
+# The image coordinates of the possible corners
+smart_home_msgs/Point[] corner_positions
+# A frame with the corner positions marked, for human readability
+sensor_msgs/Image marked_image
+# Telemetry: zero or more images generated during the pipeline
+# This can have values even if the corners are not properly detected
+sensor_msgs/Image[] intermediate_images
